@@ -1,43 +1,151 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+int main()
+{
+    int codigo, populacao, turismo;
+    char nome[50];
+    float area, pib, densidade, perCapita;
 
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    int codigo2, populacao2, turismo2;
+    char nome2[50];
+    float area2, pib2, densidade2, perCapita2;
 
+    printf("*** SUPER TRUNFO ***\n\n");
+
+    printf("Hora de cadastrar primeira carta:\n\n");
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    printf("Informe o nome da cidade:\n");
+    scanf("%s", &nome);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("Informe o código da cidade:\n");
+    scanf("%d", &codigo);
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("Qual o tamanho da população?\n");
+    scanf("%d", &populacao);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    printf("Informe a área:\n");
+    scanf("%f", &area);
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    printf("Informe o PIB:\n");
+    scanf("%f", &pib);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("Informe a quantidade de pontos turísticos:\n\n");
+    scanf("%d", &turismo);
+
+    densidade = (float)populacao / area;
+    perCapita = (float)pib / populacao;
+
+    int superPoder = (int)populacao + turismo + area + pib + densidade + perCapita;
+
+    printf("Hora de cadastrar segunda carta:\n\n");
+
+    printf("Informe o nome da cidade:\n");
+    scanf("%s", &nome2);
+
+    printf("Informe o código da cidade:\n");
+    scanf("%d", &codigo2);
+
+    printf("Qual o tamanho da população?\n");
+    scanf("%d", &populacao2);
+
+    printf("Informe a área:\n");
+    scanf("%f", &area2);
+
+    printf("Informe o PIB:\n");
+    scanf("%f", &pib2);
+
+    printf("Informe a quantidade de pontos turísticos:\n\n");
+    scanf("%d", &turismo2);
+
+    densidade2 = (float)populacao2 / area2;
+    perCapita2 = (float)pib2 / populacao2;
+
+    int superPoder2 = (int)populacao2 + turismo2 + area2 + pib2 + densidade2 + perCapita2;
+
+    printf("*** Carta 1 ***\n");
+    printf("%d - %s\n", codigo, nome);
+    printf("População: %d habitantes\n", populacao);
+    printf("Área: %.2fm^2\n", area);
+    printf("PIB: R$%.2f\n", pib);
+    printf("Pontos turísticos: %d ponto(s)\n", turismo);
+    printf("Densidade: %.2f\n", densidade);
+    printf("Pib per Capita: %.2f\n", perCapita);
+    printf("Super Poder: %d\n\n", superPoder);
+
+    printf("*** Carta 2 ***\n");
+    printf("%d - %s\n", codigo2, nome2);
+    printf("População: %d habitantes\n", populacao2);
+    printf("Área: %.2fm^2\n", area2);
+    printf("PIB: R$%.2f\n", pib2);
+    printf("Pontos turísticos: %d ponto(s)\n", turismo2);
+    printf("Densidade: %.2f\n", densidade2);
+    printf("Pib per Capita: %.2f\n", perCapita2);
+    printf("Super Poder: %d\n\n", superPoder2);
+
+    printf("Hora de definir os vencedores!\n\n");
+
+    if (populacao > populacao)
+    {
+        printf("População: %s\n", nome);
+    }
+    else
+    {
+        printf("População: %s\n", nome2);
+    }
+
+    if (area > area2)
+    {
+        printf("Área: %s\n", nome);
+    }
+    else
+    {
+        printf("Área: %s\n", nome2);
+    }
+
+        if (pib > pib2)
+    {
+        printf("PIB: %s\n", nome);
+    }
+    else
+    {
+        printf("PIB: %s\n", nome2);
+    }
+
+        if (turismo > turismo)
+    {
+        printf("Pontos Turísticos: %s\n", nome);
+    }
+    else
+    {
+        printf("Pontos Turísticos: %s\n", nome2);
+    }
+
+        if (densidade < densidade)
+    {
+        printf("Densidade: %s\n", nome);
+    }
+    else
+    {
+        printf("Densidade: %s\n", nome2);
+    }
+
+        if (perCapita > perCapita2)
+    {
+        printf("Pib per Capita: %s\n", nome);
+    }
+    else
+    {
+        printf("Pib per Capita: %s\n", nome2);
+    }
+
+        if (superPoder > superPoder2)
+    {
+        printf("Super Poder: %s\n", nome);
+    }
+    else
+    {
+        printf("Super Poder: %s\n", nome2);
+    }
 
     return 0;
 }
